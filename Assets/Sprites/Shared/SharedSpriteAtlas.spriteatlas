@@ -44,14 +44,12 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 08098718d9a25d84392e0a842205fce9, type: 3}
-    - {fileID: 2800000, guid: 758c469cf4f13f345af3526cfdaa303a, type: 3}
+    - {fileID: 2800000, guid: 3f58c7335218b934a81f3c701b64f0ed, type: 3}
     - {fileID: 2800000, guid: 15a54cbd72ee8be4b9bc5c62054aa61d, type: 3}
     - {fileID: 2800000, guid: db39db71a4e6dba4fbc1df20ac5d7897, type: 3}
     - {fileID: 2800000, guid: 694c8f1ff7e87ec4f93e118ce1a5736e, type: 3}
     - {fileID: 2800000, guid: 6e58c18d6c8344f42a4fc8d51543a57f, type: 3}
     - {fileID: 2800000, guid: f2af40544d7e27e4298e0e7222542382, type: 3}
-    - {fileID: 2800000, guid: e6503ebbbe928724daae9490c54f2cfb, type: 3}
-    - {fileID: 2800000, guid: 3f58c7335218b934a81f3c701b64f0ed, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -61,8 +59,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3f58c7335218b934a81f3c701b64f0ed, type: 3}
   - {fileID: 21300000, guid: f2af40544d7e27e4298e0e7222542382, type: 3}
   - {fileID: 21300000, guid: 08098718d9a25d84392e0a842205fce9, type: 3}
-  - {fileID: 21300000, guid: e6503ebbbe928724daae9490c54f2cfb, type: 3}
-  - {fileID: 21300000, guid: 758c469cf4f13f345af3526cfdaa303a, type: 3}
   - {fileID: 21300000, guid: 6e58c18d6c8344f42a4fc8d51543a57f, type: 3}
   - {fileID: 21300000, guid: 15a54cbd72ee8be4b9bc5c62054aa61d, type: 3}
   - {fileID: 21300000, guid: 694c8f1ff7e87ec4f93e118ce1a5736e, type: 3}
@@ -71,8 +67,6 @@ SpriteAtlas:
   - white img
   - right arrow
   - "bot\xE3o Menu"
-  - start btn
-  - check btn
   - Restart
   - left arrow
   - main menu btn
