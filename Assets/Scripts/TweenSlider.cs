@@ -16,6 +16,7 @@ public class TweenSlider : MonoBehaviour
     public bool zoomScale;
     public bool upsideDown;
     public float divideBy;
+    public float transitionYPos; // Desktop = 1000f
 
     public delegate void SlideDone(float divideBy);
     public static event SlideDone OnSlideDone;
@@ -37,9 +38,9 @@ public class TweenSlider : MonoBehaviour
     public void BeginDrag()
     {
         if(hasMultipleTextures)
-            StartCoroutine(ChangeCamMultipleTexturePos(1000f, 0f));
+            StartCoroutine(ChangeCamMultipleTexturePos(transitionYPos * 2f, 0f));
         else
-            StartCoroutine(ChangeCamTexturePos(1000f, 0f));
+            StartCoroutine(ChangeCamTexturePos(transitionYPos, 0f));
         initPos = transform.localPosition;
     }
 
@@ -96,6 +97,7 @@ public class TweenSlider : MonoBehaviour
             canvas.worldCamera,
             out position);
 
+        // y SEMPRE zero, senão dá merda!
         Vector2 finalPos = new Vector2(canvas.transform.TransformPoint(position).x, transform.localPosition.y);
         transform.position = finalPos;
     }

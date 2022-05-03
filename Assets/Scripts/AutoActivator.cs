@@ -7,6 +7,7 @@ public class AutoActivator : MonoBehaviour
     public GameObject objectToActivate;
     public float timeToActivate;
     public bool activate = true;
+
     private void OnEnable()
     {
         if(activate)

@@ -18,6 +18,7 @@ public class CarouselSelector : MonoBehaviour
 
     public int leftXPos;
     public int rightXPos;
+    public float transitionYPos; // Desktop = 1000f
 
     // Esse aqui é pra usar no código
     public void SelectCarouselPanel(int newIndex)
@@ -55,8 +56,8 @@ public class CarouselSelector : MonoBehaviour
 
         int difference = newIndex - currentIndex;
 
-        StartCoroutine(sliders[currentIndex].ChangeCamTexturePos(1000f, 0f)); 
-        StartCoroutine(sliders[currentIndex].ChangeCamMultipleTexturePos(1000f, 0f));
+        StartCoroutine(sliders[currentIndex].ChangeCamTexturePos(transitionYPos, 0f)); 
+        StartCoroutine(sliders[currentIndex].ChangeCamMultipleTexturePos(transitionYPos, 0f));
 
         if (newIndex > currentIndex) // getting a bigger index value
         {
@@ -95,7 +96,7 @@ public class CarouselSelector : MonoBehaviour
 
         int difference = newIndex - currentIndex;
 
-        StartCoroutine(sliders[currentIndex].ChangeCamTexturePos(1000f, 0f));
+        StartCoroutine(sliders[currentIndex].ChangeCamTexturePos(transitionYPos, 0f));
 
         if (newIndex > currentIndex) // getting a bigger index value
         {
