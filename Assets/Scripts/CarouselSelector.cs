@@ -10,6 +10,8 @@ public class CarouselSelector : MonoBehaviour
     public List<TweenSlider> sliders;
     public GameObject webcam;
     public GameObject multiplesWebcams;
+    public GameObject carousel;
+    public GameObject backBtn;
 
     public Sprite defaultBtnSprite;
     public Sprite selectedBtnSprite;
@@ -19,6 +21,18 @@ public class CarouselSelector : MonoBehaviour
     public int leftXPos;
     public int rightXPos;
     public float transitionYPos; // Desktop = 1000f
+
+    private void OnEnable()
+    {
+        TakeScreenshot.OnScreenshotTaken += HandleOnScreenshotTaken;
+        TakeScreenshot.OnDownloadEnd += HandleOnDownloadEnd;
+    }
+
+    private void OnDisable()
+    {
+        TakeScreenshot.OnScreenshotTaken -= HandleOnScreenshotTaken;
+        TakeScreenshot.OnDownloadEnd -= HandleOnDownloadEnd;
+    }
 
     // Esse aqui é pra usar no código
     public void SelectCarouselPanel(int newIndex)
@@ -119,6 +133,18 @@ public class CarouselSelector : MonoBehaviour
         StartCoroutine(sliders[currentIndex].ChangeCamTexturePos(0f, duration));
 
         currentIndex = newIndex;
+    }
+
+    private void HandleOnScreenshotTaken()
+    {
+        carousel.SetActive(false);
+        backBtn.SetActive(false);
+    }
+
+    private void HandleOnDownloadEnd()
+    {
+        carousel.SetActive(true);
+        backBtn.SetActive(true);
     }
 
     private void ActivateWebcam()
